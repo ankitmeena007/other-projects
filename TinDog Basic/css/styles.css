@@ -1,0 +1,275 @@
+/* heirarchical selector
+selector1+space+selector2 {}
+
+selector 1 parent class, selector 2 child class
+for eg
+div h1{
+  color:red;
+}
+
+or
+.container_class .class_x{
+  ---
+}
+
+when there is space, it is heirarchical
+read from right to left. right is child left is parent
+
+however, when there is no space, we are targeting a specific
+element.
+for eg
+h1#title targets that h1 whose id name is title
+ */
+
+
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+
+
+
+h1, h2, h3, h4 ,h5 , h6 {
+  font-family: "Montserrat", sans-serif;
+}
+h1{
+  /* font-family: 'Montserrat', sans-serif ; */
+
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+a{
+  color:inherit;
+  padding:12px;
+}
+
+/* classes */
+
+/* Navigation bar  */
+
+.navbar {
+  padding: 0 0 4.5rem;
+  /* top left right */
+}
+
+.navbar-brand {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+.nav-item {
+  padding-left:15px;
+  padding-right: 15px;
+
+}
+
+.nav-link {
+  font-family: "Ubuntu";
+  font-size: 1.2rem;
+}
+
+/* download buttons  */
+
+.download-button {
+  margin:5% 3% 5% 0%;
+}
+
+/* title image  */
+
+.iphone {
+  width:60%;
+  transform: rotate(25deg);
+  position:absolute;
+
+  right:25%;
+  /*z-index:1;*/  /*if we include this line, then also image will be behind
+  features section but this time it will be due to the html order as
+  feature is later in html so it will be on top
+  or alternatively, we can make zindex as 0 (which is also the default
+  z index) so image will be back. this is ultimately same as
+  not specifying z index at all*/
+
+}
+
+
+.container-fluid{
+  padding:3% 15% 14%;
+}
+
+
+.icon {
+  color: #ef8172;
+  margin-bottom: 5%;
+}
+
+.icon:hover {
+  color:#ff4c68;
+}
+
+/* features section */
+
+
+
+
+
+.feature-box {
+  /* text-align: center;  instead used text align center in body*/
+  padding:5%;
+}
+
+.features-heading  {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 1.5rem;
+
+  margin-bottom: 5%;
+}
+
+.features-text {
+  color:#8f8f8f;
+}
+
+
+/* testimonial section  */
+
+
+
+.carousel-item{
+  padding: 7% 15%;
+}
+
+.testimonial-statement {
+  font-family: "Ubuntu";
+  font-size:2.9rem;
+  line-height: 1.5;
+}
+
+
+.testimonial-image {
+  border-radius: 50%;
+  width:20%;
+  margin:20px;
+}
+
+
+
+.press-logo {
+  width:10%;
+  margin:3rem;
+}
+
+
+
+
+.pricing-column {
+  padding:2rem 2rem ;
+}
+
+
+.pricing-heading {
+  font-family: "Ubuntu";
+  font-weight: 800;
+  font-size: 2.5rem;
+
+  margin-bottom: 2%;
+}
+
+.pricing-text{
+  color:#8f8f8f;
+  font-size: 1.1rem;
+}
+
+
+
+
+/* to see mobile image a little more down, added 14% padding bottom
+ to .container-fluid
+
+we could also do
+.col-lg-6 {
+  margin-bottom: 14%;
+} */
+
+.cta-headline{
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  color:white;
+
+  padding: 5% 20% 0% ;
+}
+
+.copyright-text{
+  color:#8f8f8f;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+
+
+/* id's */
+
+#title{
+  background-color:#ff4c68;
+  color:white;
+  text-align: left;
+}
+/* to target id's we have to use # sign instead of . for classes */
+
+#features {
+  padding: 6% 12%;
+  background-color: white; /* by default it is transparent */
+  position:relative;
+  z-index:1
+
+}
+
+#testimonials{
+
+  /* text-align: center;  instead used text align center in body*/
+  background-color: #ef8172;
+  /* #ff4c68; */
+  color:white;
+}
+
+#press{
+  background-color:#ff4c68;
+  padding-bottom: 3%;
+  /* text-align: center;  instead used text align center in body*/
+}
+
+#pricing {
+  padding:100px;
+  /* text-align: center;  instead used text align center in body*/
+}
+
+#cta{
+  /* text-align: center;  instead used text align center in body*/
+  background-color: #ff4c68;
+}
+
+#footer{
+  /* text-align: center; instead used text align center in body*/
+  margin:5%;
+}
+
+
+
+
+
+@media (max-width:1028px) {
+  .iphone{
+    position:static;
+    transform: rotate(0);
+
+  }
+
+  .container-fluid{
+    text-align: center;
+    padding-bottom: 0;
+  }
+}
